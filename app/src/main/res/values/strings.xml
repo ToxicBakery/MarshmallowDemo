@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Android M Demo</string>
+    <string name="process_text">M Demo Text</string>
+    <string name="share_receiver">Share Receiver</string>
+    <!-- Fragment Titles -->
+    <string name="fragment_title_assist_api">Assist API</string>
+    <string name="fragment_title_direct_share">DirectShare</string>
+    <string name="fragment_title_simplified_permissions">Simplified Permissions</string>
+    <string name="fragment_title_text_selections">Text Selection</string>
+    <string name="fragment_title_themeable_colorstate_list">Themeable ColorState List</string>
+    <string name="fragment_title_voice_interactions">Voice Interactions</string>
+    <string name="fragment_title_flashlight_api">Flashlight API</string>
+    <!-- Direct Share Service -->
+    <string name="direct_share_shared_data">Shared Data</string>
+    <string name="direct_share_some_awesome">Share Some Awesome</string>
+    <string name="direct_share_service_name">Direct Share Demo</string>
+    <!-- Assist -->
+    <string name="assist_trump_info">Long press home for some info about Donald Trump</string>
+    <!-- Text Selection -->
+    <string name="text_selection_lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in efficitur ligula, id malesuada lectus. Aenean iaculis interdum mauris. Fusce imperdiet iaculis mollis. Donec a posuere erat, a tincidunt risus. Etiam efficitur vitae neque a congue. Ut viverra volutpat libero, sit amet euismod augue pharetra vel. Vivamus a hendrerit neque. Aliquam ut velit lobortis, consectetur nisi non, consequat turpis. Pellentesque ut metus ornare, maximus lorem vitae, accumsan diam. Nullam massa mi, tempor ac venenatis at, vehicula non metus. Integer maximus, libero vitae sagittis ornare, turpis dui bibendum ipsum, cursus rutrum nisi mauris quis est. Nullam sit amet pellentesque nunc, eu accumsan dolor. Vivamus vehicula, nulla vel vulputate rhoncus, lacus ligula eleifend lectus, et tempor lectus tellus sagittis metus. Maecenas lacinia ex eget enim ornare vulputate auctor id lorem.</string>
+    <!-- Process Text -->
+    <string name="process_text_title">Received Text</string>
+    <string name="process_error_no_text">No text received</string>
+    <!-- Color State -->
+    <string name="color_state_button">Click Me\nI Change Colors</string>
+    <!-- Permission -->
+    <string name="permission_request_button">Request Permission</string>
+    <string name="permission_granted">Permission Granted</string>
+    <!-- Flashlight -->
+    <string name="flashlight_button">Toggle Light</string>
+    <!-- Search -->
+    <string name="search_receiver">Search Request</string>
+    <string name="search_no_query">No query specified</string>
+</resources>
