@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content xmlns:android="http://schemas.android.com/apk/res/android">
+    <include domain="file" path="important_backup_data.json"/>
+</full-backup-content>
+
+<!--
+Running the manual backup commands produces an ADB log for debugging.
+
+adb shell setprop log.tag.BackupXmlParserLogging VERBOSE
+adb shell bmgr run
+adb shell bmgr fullbackup <PACKAGE>
+
+    ====================================================
+V/BackupXmlParserLogging﹕ Found valid fullBackupContent; parsing xml resource.
+V/BackupXmlParserLogging﹕ ====================================================
+V/BackupXmlParserLogging﹕ [ 08-09 13:59:58.431 12843:12854 V/BackupXmlParserLogging ]
+    ...parsed /data/data/com.example.ToxicBakery.androidmdemo/files/important_backup_data.json for domain "file"
+V/BackupXmlParserLogging﹕ [ 08-09 13:59:58.431 12843:12854 V/BackupXmlParserLogging ]
+    Xml resource parsing complete.
+V/BackupXmlParserLogging﹕ Final tally.
+V/BackupXmlParserLogging﹕ Includes:
+V/BackupXmlParserLogging﹕ domain=f
+V/BackupXmlParserLogging﹕ /data/data/com.example.ToxicBakery.androidmdemo/files/important_backup_data.json
+V/BackupXmlParserLogging﹕ Excludes:
+V/BackupXmlParserLogging﹕ ...nothing to exclude.
+V/BackupXmlParserLogging﹕ [ 08-09 13:59:58.432 12843:12854 V/BackupXmlParserLogging ]
+    ====================================================
+
+-->

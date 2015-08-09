@@ -77,7 +77,8 @@ public class FragmentMenu extends Fragment implements IDataSet.IOnFragmentRefSel
         private static final List<FragmentRef> CLASSES = new ArrayList<>();
 
         static {
-            CLASSES.add(new FragmentRef(R.string.fragment_title_assist_api, FragmentAssistApi.class));
+            // Not yet implemented it seems in M v2 Preview
+            //CLASSES.add(new FragmentRef(R.string.fragment_title_assist_api, FragmentAssistApi.class));
             CLASSES.add(new FragmentRef(R.string.fragment_title_direct_share, FragmentDirectShare.class));
             CLASSES.add(new FragmentRef(R.string.fragment_title_simplified_permissions, FragmentSimplifiedPermissions.class));
             CLASSES.add(new FragmentRef(R.string.fragment_title_text_selections, FragmentTextSelection.class));
