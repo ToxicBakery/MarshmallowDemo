@@ -30,10 +30,10 @@ public class FragmentDirectShare extends Fragment implements View.OnClickListene
 
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TITLE, "Hello!");
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Welcome to the first Android/iOS combined Meetup! Goats suck!");
+                sendIntent.putExtra(Intent.EXTRA_TITLE, getString(R.string.direct_share_msg_title));
+                sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.direct_share_msg_content));
                 sendIntent.setType("text/plain");
-                startActivity(Intent.createChooser(sendIntent, "Share with..."));
+                startActivity(Intent.createChooser(sendIntent, getString(R.string.direct_share_with)));
 
                 break;
         }

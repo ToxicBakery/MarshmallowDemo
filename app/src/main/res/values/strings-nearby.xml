@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    This is the service identifier for Nearby Connections. Do NOT copy and paste this value
+    into your own application.  Instead, choose a unique identifier that is appropriate for
+    your application.
+    -->
+    <string name="service_id">com.example.ToxicBakery.androidmdemo</string>
+
+</resources>

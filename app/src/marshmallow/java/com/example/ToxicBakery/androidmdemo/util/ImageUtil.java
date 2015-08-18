@@ -21,6 +21,7 @@ public class ImageUtil {
         final Paint paint = new Paint();
         paint.setAntiAlias(true);
 
+
         final int smallestDimension = bitmap.getWidth() < bitmap.getHeight() ?
                 bitmap.getWidth()
                 : bitmap.getHeight();

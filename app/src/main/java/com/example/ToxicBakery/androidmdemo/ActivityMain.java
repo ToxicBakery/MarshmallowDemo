@@ -2,8 +2,8 @@ package com.example.ToxicBakery.androidmdemo;
 
 import android.app.assist.AssistContent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.ToxicBakery.androidmdemo.fragment.FragmentMenu;
 
@@ -14,9 +14,11 @@ public class ActivityMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, new FragmentMenu(), FragmentMenu.TAG)
-                .commit();
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container, new FragmentMenu(), FragmentMenu.TAG)
+                    .commit();
+        }
     }
 
     @Override

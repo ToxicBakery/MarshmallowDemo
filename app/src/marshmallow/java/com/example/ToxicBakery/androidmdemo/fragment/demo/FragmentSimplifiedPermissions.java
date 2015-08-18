@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ToxicBakery.androidmdemo.R;
+import com.example.ToxicBakery.androidmdemo.util.PermissionUtil;
 
 public class FragmentSimplifiedPermissions extends Fragment implements View.OnClickListener {
 
@@ -55,15 +56,7 @@ public class FragmentSimplifiedPermissions extends Fragment implements View.OnCl
     }
 
     private void checkPermissions() {
-        boolean hasAllPermissions = true;
-        for (String permission : PERMISSIONS) {
-            final int result = getActivity().checkSelfPermission(permission);
-            if (result != PackageManager.PERMISSION_GRANTED) {
-                hasAllPermissions = false;
-                break;
-            }
-        }
-
+        final boolean hasAllPermissions = PermissionUtil.hasAllPermissions(getActivity(), PERMISSIONS);
         permissionGranted.setVisibility(hasAllPermissions ? View.VISIBLE : View.GONE);
         requestPermission.setVisibility(hasAllPermissions ? View.GONE : View.VISIBLE);
     }

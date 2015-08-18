@@ -2,6 +2,7 @@ package com.example.ToxicBakery.androidmdemo.fragment.demo;
 
 import android.content.Context;
 import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -21,6 +22,7 @@ public class FragmentFlashlightAPI extends Fragment implements View.OnClickListe
     private static final String KEY_TORCH_REQUEST = "KEY_TORCH_REQUEST";
 
     private boolean torchRequest;
+    private View button;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,8 +38,8 @@ public class FragmentFlashlightAPI extends Fragment implements View.OnClickListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_flashlight, container, false);
 
-        view.findViewById(R.id.button_torch)
-                .setOnClickListener(this);
+        button = view.findViewById(R.id.button_torch);
+        button.setOnClickListener(this);
 
         return view;
     }
@@ -53,11 +55,17 @@ public class FragmentFlashlightAPI extends Fragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_torch:
-                CameraManager cameraManager = (CameraManager) getActivity().getSystemService(Context.CAMERA_SERVICE);
                 torchRequest = !torchRequest;
+
                 try {
+                    CameraManager cameraManager = (CameraManager) getActivity().getSystemService(Context.CAMERA_SERVICE);
                     for (String id : cameraManager.getCameraIdList()) {
-                        cameraManager.setTorchMode(id, torchRequest);
+
+                        // Turn on the flash if camera has one
+                        if (cameraManager.getCameraCharacteristics(id)
+                                .get(CameraCharacteristics.FLASH_INFO_AVAILABLE)) {
+                            cameraManager.setTorchMode(id, torchRequest);
+                        }
                     }
                 } catch (CameraAccessException e) {
                     Log.e(TAG, "Failed to interact with camera.", e);
